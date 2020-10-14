@@ -1,24 +1,34 @@
 package com.bridgelabz.problemday13;
 
 public class MyQueue<T> {
-  private LinkedList<T> myLinkedList;
-  public MyQueue() {
-	  myLinkedList=new LinkedList<T>();
-  }
-  public void enqueue(T data) {
-	  myLinkedList.append(data);
-  }
+	private LinkedList<T> myLinkedList;
 
-  public void print() {
-	  myLinkedList.show();
-  }
-  public boolean isEmpty() {
-	  if(myLinkedList.head==null)
-		  return true;
-	  else
-		  return false;
-  }
-  public int  size() {
-	   return myLinkedList.size();
-  }
+	public MyQueue() {
+		myLinkedList = new LinkedList<T>();
+	}
+
+	public void enqueue(T data) {
+		myLinkedList.append(data);
+	}
+
+	public T dequeue() {
+		T topElement = myLinkedList.head.getData();
+		myLinkedList.pop();
+		return topElement;
+	}
+
+	public void print() {
+		myLinkedList.show();
+	}
+
+	public boolean isEmpty() {
+		if (myLinkedList.head == null)
+			return true;
+		else
+			return false;
+	}
+
+	public int size() {
+		return myLinkedList.size();
+	}
 }

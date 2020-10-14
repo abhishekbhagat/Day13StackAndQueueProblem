@@ -13,5 +13,13 @@ public class MyQueueTest {
 		myQueue.enqueue(b);
 		myQueue.enqueue(c);
 	}
-	
+     	@Test
+	public void given3NumberWhenPoppedToQueueShoulMatchWithFirstNode() {
+		MyQueue<Integer> myQueue = new MyQueue<Integer>();
+		Integer a = 70, b = 30, c = 56;
+		myQueue.enqueue(a);
+		myQueue.enqueue(b);
+		myQueue.enqueue(c);
+		Assert.assertEquals(a, myQueue.dequeue());
+	}
 }
