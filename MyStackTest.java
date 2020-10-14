@@ -13,4 +13,14 @@ public class MyStackTest {
 		stack.print();
 		Assert.assertEquals(c, stack.peak());
 	}
+        @Test
+	public void given3NumberWhenPoppedToStackShoulMatchWithLastAddedNode() {
+		MyStack<Integer> stack = new MyStack<>();
+		Integer a = 70, b = 30, c = 56;
+		stack.push(a);
+		stack.push(b);
+		stack.push(c);
+		stack.print();
+		Assert.assertEquals(c, stack.pop());
+	}
 }
